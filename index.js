@@ -6,8 +6,7 @@ const generatePage = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 //const questions = [];
 
-const promptUser = () => {
-    return inquirer.prompt([
+const questions = [
         {
             type: "input",
             name: "title",
@@ -54,16 +53,23 @@ const promptUser = () => {
             name: "email",
             message: "What is your email address?"
         }
-    ]);
-} 
+    ]
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {}
+// TODO: Create a function to initialize app and write README file
+const init = () => {
+    return inquirer.prompt(questions)
+    .then(answers => {
+        const data = generatePage(answers);
+        console.log(answers);
+        fs.writeFile('./dist/README.md', data, err => {
+        if(err) throw new Error(err);
+            console.log('README file is created!');
+        });
+    });
+}
 
 // Function call to initialize app
 init();
-
-promptUser();
