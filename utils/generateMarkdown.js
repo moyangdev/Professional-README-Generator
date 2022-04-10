@@ -32,7 +32,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-  ${data.license}.
+  ![badge](http://img.shields.io/badge/license-${data.license}-blue.svg)
 
   ## Contribution
   ${data.contribution}
