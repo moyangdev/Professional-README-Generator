@@ -21,7 +21,7 @@
   ![badge](http://img.shields.io/badge/license-MIT-blue.svg)
 
   ## Contribution
-  Project is created Mo Yang, open to feedback and contributions. 
+  Project is created Mo Yang, open to feedback and contributions.
 
   ## Test
   Clone the repository and install dependency packages first.

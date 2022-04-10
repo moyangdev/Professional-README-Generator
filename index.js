@@ -4,8 +4,6 @@ const inquirer = require('inquirer');
 const generatePage = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-//const questions = [];
-
 const questions = [
         {
             type: "input",
@@ -54,9 +52,6 @@ const questions = [
             message: "What is your email address?"
         }
     ]
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app and write README file
 const init = () => {
